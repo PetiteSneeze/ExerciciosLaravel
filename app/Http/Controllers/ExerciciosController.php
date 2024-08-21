@@ -49,4 +49,16 @@ class ExerciciosController extends Controller
         $resultado = $valor1 / $valor2;
         return view('exer4resp', compact('resultado'));
     }
+
+    public function mostrarFormulario5(){
+        return view('exer5');
+    }
+
+    public function calcularFormulario5(Request $request){
+        $valor1 = $request->input('Valor1');
+        $valor2 = $request->input('Valor2');
+        $valor3 = $request->input('Valor3');
+        $resultado = ($valor1 + $valor2 + $valor3) / 3;
+        return view('exer5resp', compact('resultado'));
+    }
 }
