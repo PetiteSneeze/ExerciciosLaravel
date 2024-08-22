@@ -81,4 +81,15 @@ class ExerciciosController extends Controller
         $resultado = ($valor1 - 32) *5 /9 ;
         return view('exer7resp', compact('resultado'));
     }
+
+    public function mostrarFormulario8(){
+        return view('exer8');
+    }
+
+    public function calcularFormulario8(Request $request){
+        $valor1 = $request->input('Valor1');
+        $valor2 = $request->input('Valor2');
+        $resultado = $valor1 * $valor2;
+        return view('exer8resp', compact('resultado'));
+    }
 }

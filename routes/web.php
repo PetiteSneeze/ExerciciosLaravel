@@ -50,3 +50,7 @@ Route::post('/exer6resp', [ExerciciosController::class, 'calcularFormulario6']);
 Route::get('/exer7', [ExerciciosController::class, 'mostrarFormulario7']);
 
 Route::post('/exer7resp', [ExerciciosController::class, 'calcularFormulario7']);
+
+Route::get('/exer8', [ExerciciosController::class, 'mostrarFormulario8']);
+
+Route::post('/exer8resp', [ExerciciosController::class, 'calcularFormulario8']);
