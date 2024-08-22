@@ -102,4 +102,15 @@ class ExerciciosController extends Controller
         $resultado = ($valor1 * $valor1) * 3.14159 ;
         return view('exer9resp', compact('resultado'));
     }
+
+    public function mostrarFormulario10(){
+        return view('exer10');
+    }
+
+    public function calcularFormulario10(Request $request){
+        $valor1 = $request->input('Valor1'); // Este será o comprimento do retângulo
+        $valor2 = $request->input('Valor2'); // Este será a largura do retângulo
+        $resultado = 2 * ($valor1 + $valor2);
+        return view('exer10resp', compact('resultado'));
+    }
 }
